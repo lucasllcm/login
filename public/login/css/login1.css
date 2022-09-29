@@ -1,17 +1,16 @@
-/*
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
  }
-  
+
 body{
-  background-color: red;
+  background-color: #131219;
   margin-top: 2%;
   margin-left: 36%;
  }
-  
-input{
+
+ input{
   background-color: #fcfdff;
   width: 400px;
   height: 30px;
@@ -21,14 +20,13 @@ input{
   font-size: 18px;
   text-align: center;
 }
-  
+
 h1{
   color: #fff;
   font-family: Ubuntu;
-  padding: 20px;
   margin-left: 27%;
 }
-  
+
 .btn{
   width: 400px;
   height: 50px;
@@ -47,4 +45,3 @@ form{
   color: #fff;
   width: 500px;
 }
-*/

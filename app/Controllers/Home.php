@@ -6,12 +6,28 @@ class Home extends BaseController
 {
     public function index()
     {
+        $session = session();
+
+        $email = $session->get('email');
+
+        if( $email != null ){
+            return redirect()->to(base_url('restrita'));
+        }
+
         //login
         return view('login_form');
     }
 
     public function restrita()
     {
+        $session = session();
+
+        $email = $session->get('email');
+
+        if( $email == null ){
+            return redirect()->to(base_url('/'));
+        }        
+
         //restrita
         return view('area_restrita'); 
     }

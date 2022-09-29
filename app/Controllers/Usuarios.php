@@ -15,7 +15,7 @@ class Usuarios extends BaseController{
 
   public function logout()
   {
-    
+    return redirect()->to( base_url()  );
   }
 
   public function cadastrar()

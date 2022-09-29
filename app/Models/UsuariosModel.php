@@ -6,7 +6,14 @@ class UsuariosModel extends Model {
 
   protected $table = 'usuarios';
   protected $primaryKey = 'id_usuario';
-  protected $allowedFields = ['nome_usuario', 'email_usuario', 'senha_usuario'];
+
+  protected $useAutoIncrement = true;
+
+  protected $allowedFields = [
+    'nome_usuario', 
+    'email_usuario', 
+    'senha_usuario'
+  ];
   protected $returnType = 'object';
   
 }
