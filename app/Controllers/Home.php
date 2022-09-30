@@ -8,11 +8,17 @@ class Home extends BaseController
     {
         $session = session();
 
+        $msgErro = $session->getFlashdata('msgErro');
+
         $email = $session->get('email');
 
         if( $email != null ){
             return redirect()->to(base_url('restrita'));
         }
+
+        $dadosView = [
+            'msgErro' => $msgErro
+        ];
 
         //login
         return view('login_form');
@@ -25,6 +31,8 @@ class Home extends BaseController
         $email = $session->get('email');
 
         if( $email == null ){
+
+            $session->setFlashdata('msgErro', 'Faca o login primeiro!');
             return redirect()->to(base_url('/'));
         }        
 

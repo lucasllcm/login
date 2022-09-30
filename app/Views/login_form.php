@@ -9,6 +9,16 @@
 </head>
 <body>
 
+  <?php
+    if ( $msgErro != null){
+     ?>
+        <div class="alert alert-danger" role="alert">
+          <?= $msgErro ?>
+        </div>
+      <?php
+    }
+  ?>
+
   <form method="post" action="<?= base_url ('login') ?>">
     <h1>Login</h1>
     <div class="form">
