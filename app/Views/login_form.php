@@ -9,7 +9,7 @@
 </head>
 <body>
 
-  <?php
+<?php
     if ( $msgErro != null){
      ?>
         <div class="alert alert-danger" role="alert">
@@ -22,15 +22,16 @@
   <form method="post" action="<?= base_url ('login') ?>">
     <h1>Login</h1>
     <div class="form">
-      <label class="form-label">Email:</label>
+      <label for="email" class="form-label">Email:</label>
       <input type="email" class="form-control" id="email" name="email" placeholder="Digite o email">
     </div>
     <div class="form">
-      <label class="form-label">Senha:</label>
+      <label for="senha" class="form-label">Senha:</label>
       <input type="password" class="form-control" id="senha" name="senha" placeholder="Digite a senha">
     </div>
     <button type="submit" class="btn">Entrar</button>
+    <p">Não tem uma conta?<a href="<?= base_url('cadastro') ?>">Cadastre-se</a></p>
   </form>
-  
+
 </body>
 </html>

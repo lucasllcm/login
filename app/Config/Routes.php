@@ -39,6 +39,8 @@ $routes->get ('/'        ,  'Home::index'     );
 $routes->get ('restrita' ,  'Home::restrita'  );
 $routes->post('login'    ,  'Usuarios::login' );
 $routes->get ('logout'   ,  'Usuarios::logout');
+$routes->get('cadastro',   'Home::cadastro');
+$routes->post('salvar',    'Home::salvar');
 
 /*
  * --------------------------------------------------------------------
